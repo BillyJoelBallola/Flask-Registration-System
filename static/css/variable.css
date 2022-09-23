@@ -1,0 +1,24 @@
+:root{
+    --color-bg: #F0F2F5;
+
+    --color-white: #fff;
+    --color-dark: #212121;
+    --color-black: #000;
+    --color-text-gray: #B5B5B5;
+    --color-text-darkgray: #606060;
+
+    --color-bg-primary: #00022C;
+    --color-accent: #0066FF;
+    --color-accent-2: #04c286;
+    --color-accent-3: #7700ff;
+    --color-accent-4: #f700ff;
+    --color-accent-5: #dd9606;
+    --color-accent-6: #c2bc03;
+    --color-accent-7: #ff4040fd;
+    
+    --color-shadow: #0000001a;
+
+    --container-width-sm: 94%;
+    --container-width-md: 90%;
+    --container-width-lg: 86%;
+}

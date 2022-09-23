@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Add Student {% endblock %}</h1>
+    <div class="container add-student">
+        <div class="wrapper">
+            <div class="title">
+                <h3>Add New Student</h3>
+            </div>
+            <form class="form-reg" method="post">
+                <h4>Student Information</h4>
+                <div class="flex">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstname">First Name<span class="star-symbol">*</span></label>
+                            <input type="TEXT" name="firstname" placeholder="Enter Here" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname">Last Name<span class="star-symbol">*</span></label>
+                            <input type="TEXT" name="lastname" placeholder="Enter Here" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="middlename">Middle Name<span class="star-symbol">*</span></label>
+                            <input type="TEXT" name="middlename" placeholder="Enter Here" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="dob">Date of Birth<span class="star-symbol">*</span></label>
+                            <input type="date" name="dob" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Age<span class="star-symbol">*</span></label>
+                            <input type="TEXT" name="age" placeholder="Enter Here" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="studNum">Student Number<span class="star-symbol">*</span></label>
+                            <input type="TEXT" name="studNum" placeholder="Enter Here" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lrn">Learner Referece Number (LRN)<span class="star-symbol">*</span></label>
+                            <input type="TEXT" name="lrn" placeholder="Enter Here" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="section">Section<span class="star-symbol">*</span></label>
+                            <select name="section" required>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="grade-level">Grade<span class="star-symbol">*</span></label>
+                            <select name="grade-level" required>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="address" class="address">Address
+                                <div>
+                                    <span class="address-format">(Street, Barangay, Municipal, City/Province)</span>
+                                    <span class="star-symbol">*</span>
+                                </div>
+                            </label>
+                            <input class="address" type="TEXT" name="address" placeholder="Enter Here" required>
+                        </div>
+                    </div>
+
+                <h4>Guardian Information</h4>
+                <div class="flex">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="g_firstname">First Name<span class="star-symbol">*</span></label>
+                            <input type="TEXT" name="g_firstname" placeholder="Enter Here" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="g_lastname">Last Name<span class="star-symbol">*</span></label>
+                            <input type="TEXT" name="g_lastname" placeholder="Enter Here" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact">Contact<span class="star-symbol">*</span></label>
+                            <input type="TEXT" name="contact" placeholder="Enter Here" required>
+                        </div>
+                    </div>  
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="g_address" class="address">Address
+                                <div>
+                                    <span class="address-format">(Street, Barangay, Municipal, City/Province)</span>
+                                    <span class="star-symbol">*</span>
+                                </div>
+                            </label>
+                            <input class="address" type="TEXT" name="g_address" placeholder="Enter Here" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input class="input-submit" type="submit" name="submit" value="Submit">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

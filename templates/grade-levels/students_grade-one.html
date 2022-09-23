@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} GRADE 1 {% endblock %}</h1>
+    <div class="container registered">
+        <div class="wrapper">
+            <div class="title">
+                <h3>Grade One</h3>
+            </div>
+       
+            <table class="students-table">
+                <tr class="blue">
+                    <th>Student No</th>
+                    <th>First Name</th>
+                    <th class="lastName">Last Name</th>
+                    <th class="section">Section</th>
+                    <th class="contact">Contact</th>
+                </tr>
+                {% for student in students %}
+                    <tr>
+                        <td><a href="{{ url_for('edit_student', id=student['id']) }}">{{ student['s_studnum'] }}</a></td>
+                        <td>{{ student['s_firstname'] }}</td>
+                        <td class="lastName">{{ student['s_lastname'] }}</td>
+                        <td class="section">{{ student['s_section'] }}</td>
+                        <td class="contact">{{ student['sg_contact'] }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+      
+        </div>
+    </div>
+{% endblock %}

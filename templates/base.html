@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script defer src="../static/script/main.js"></script>
+    <script defer src="https://kit.fontawesome.com/32dee845d7.js" crossorigin="anonymous"></script>
+
+    <title>{% block title %} {% endblock %} | Mabuhay Elementary School</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar container">
+            <img class="nav-logo" src="../static/assets/school-logo.png" alt="logo">
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('students') }}">Students</a></li>
+                <li><a href="{{ url_for('new_student') }}">Add Student</a></li>
+            </ul>
+            <button class="hamburger show"><img src="../static/assets/hamburger.png"></button>
+            <button class="close"><img src="../static/assets/close.png"></button>
+        </nav>
+    </header>
+
+    {% for message in get_flashed_messages() %}
+        <div class="alert show">
+            <p class="alert-message">{{ message }}</p>
+            <div class="alert-close">&times;</div>
+        </div>
+	{% endfor %}
+
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+
+    <footer>
+        <div class="footer-container container">
+            <div class="copyright">
+                <small>Mabuhay Elementary School © Copyright 2022. All Rights Reserved.</small>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

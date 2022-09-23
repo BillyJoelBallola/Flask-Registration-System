@@ -1,0 +1,86 @@
+@import url('./variable.css');
+@import url('./general.css');
+@import url('./home.css');
+@import url('./cards.css');
+@import url('./table.css');
+@import url('./form.css');
+
+/* ======= NAVBAR ======= */
+
+header{
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 12;
+    
+    display: grid;
+    place-items: center;
+    background: var(--color-dark);
+    box-shadow: 0px 4px 10px var(--color-shadow);
+}
+
+.navbar{
+    display: flex;
+    align-items: center;    
+    justify-content: space-between;
+    height: 4rem;
+}
+
+.nav-logo{
+    width: 2.5em;
+    aspect-ratio: 1;
+}
+
+.nav-links{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.nav-links li a{
+    font-size: .9rem;
+    text-decoration: none;
+    color: var(--color-bg);
+    font-weight: 600;
+}
+
+.hamburger,
+.close{
+    display: none;
+}
+
+@media (max-width: 1000px){
+    .nav-links{
+       background: var(--color-dark);
+       position: absolute;
+       top: -20em;
+       left: 0;
+       right: 0;
+       flex-direction: column;
+       padding-block: 2rem;
+       transition: 400ms ease-in-out;
+       z-index: -1;
+       box-shadow: 0px 5px 10px 5px var(--color-shadow);
+    }
+
+    .close.show,
+    .hamburger.show{
+        background: transparent;
+        display: block;
+    }
+    
+}
+
+/* ========= FOOTER ========= */
+
+footer{
+    width: 100vw;
+    padding: 1em;
+    background: var(--color-dark);
+    color: var(--color-white);
+}
+
+.footer-container{
+    text-align: center;
+}

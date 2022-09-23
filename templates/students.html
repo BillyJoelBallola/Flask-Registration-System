@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Students {% endblock %}</h1>
+    <div class="container grade-level">
+        <div class="grade-cards">
+            <div class="card">
+                <div class="card-img"></div>
+                <div class="card-content">
+                    <h2>grade 1</h2>
+                    <a href="{{ url_for('grade_one') }}">View List</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img"></div>
+                <div class="card-content">
+                    <h2>grade 2</h2>
+                    <a href="{{ url_for('grade_two') }}">View List</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img"></div>
+                <div class="card-content">
+                    <h2>grade 3</h2>
+                    <a href="{{ url_for('grade_three') }}">View List</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img"></div>
+                <div class="card-content">
+                    <h2>grade 4</h2>
+                    <a href="{{ url_for('grade_four') }}">View List</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img"></div>
+                <div class="card-content">
+                    <h2>grade 5</h2>
+                    <a href="{{ url_for('grade_five') }}">View List</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img"></div>
+                <div class="card-content">
+                    <h2>grade 6</h2>
+                    <a href="{{ url_for('grade_six') }}">View List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
